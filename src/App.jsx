@@ -3,18 +3,18 @@ import './style.css'; // Importamos el archivo de estilos
 
 // Define los signos del zodiaco y sus rangos de fecha con íconos SVG
 const zodiacSigns = [
-  { name: 'Aries', range: '21 de marzo - 19 de abril', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zM256 100c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64zm0 216c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96z"/></svg>`, description: 'Eres un líder audaz, enérgico y apasionado.' },
-  { name: 'Tauro', range: '20 de abril - 20 de mayo', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres práctico, fiable y con una gran determinación.' },
-  { name: 'Géminis', range: '21 de mayo - 20 de junio', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zM256 100c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64zm0 216c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm-96-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres curioso, adaptable e increíblemente versátil.' },
-  { name: 'Cáncer', range: '21 de junio - 22 de julio', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres emocional, protector y profundamente intuitivo.' },
-  { name: 'Leo', range: '23 de julio - 22 de agosto', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres carismático, generoso y un líder nato.' },
-  { name: 'Virgo', range: '23 de agosto - 22 de septiembre', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres analítico, meticuloso y muy trabajador.' },
-  { name: 'Libra', range: '23 de septiembre - 22 de octubre', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres diplomático, justo y buscas la armonía.' },
-  { name: 'Escorpio', range: '23 de octubre - 21 de noviembre', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres apasionado, misterioso y con una gran fuerza de voluntad.' },
-  { name: 'Sagitario', range: '22 de noviembre - 21 de diciembre', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres aventurero, optimista y de espíritu libre.' },
-  { name: 'Capricornio', range: '22 de diciembre - 19 de enero', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres ambicioso, disciplinado y muy responsable.' },
-  { name: 'Acuario', range: '20 de enero - 18 de febrero', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres original, independiente y un visionario.' },
-  { name: 'Piscis', range: '19 de febrero - 20 de marzo', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0 512 114.6 512 256zm-256 156c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-188c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64z"/></svg>`, description: 'Eres compasivo, soñador y muy creativo.' },
+  { name: 'Aries', range: '21 de marzo - 19 de abril', icon: `/aries.png`, description: 'Eres un líder audaz, enérgico y apasionado.' },
+  { name: 'Tauro', range: '20 de abril - 20 de mayo', icon: '/taurus.png', description: 'Eres práctico, fiable y con una gran determinación.' },
+  { name: 'Géminis', range: '21 de mayo - 20 de junio', icon: '/gemini.png', description: 'Eres curioso, adaptable e increíblemente versátil.' },
+  { name: 'Cáncer', range: '21 de junio - 22 de julio', icon: '/cancer.png', description: 'Eres emocional, protector y profundamente intuitivo.' },
+  { name: 'Leo', range: '23 de julio - 22 de agosto', icon: '/leo.png', description: 'Eres carismático, generoso y un líder nato.' },
+  { name: 'Virgo', range: '23 de agosto - 22 de septiembre', icon: '/virgo.png', description: 'Eres analítico, meticuloso y muy trabajador.' },
+  { name: 'Libra', range: '23 de septiembre - 22 de octubre', icon: '/libra.png', description: 'Eres diplomático, justo y buscas la armonía.' },
+  { name: 'Escorpio', range: '23 de octubre - 21 de noviembre', icon: '/scorpio.png', description: 'Eres apasionado, misterioso y con una gran fuerza de voluntad.' },
+  { name: 'Sagitario', range: '22 de noviembre - 21 de diciembre', icon: '/sagittarius.png', description: 'Eres aventurero, optimista y de espíritu libre.' },
+  { name: 'Capricornio', range: '22 de diciembre - 19 de enero', icon: '/capricorn.png', description: 'Eres ambicioso, disciplinado y muy responsable.' },
+  { name: 'Acuario', range: '20 de enero - 18 de febrero', icon: '/aquarius.png', description: 'Eres original, independiente y un visionario.' },
+  { name: 'Piscis', range: '19 de febrero - 20 de marzo', icon: '/pisces.png', description: 'Eres compasivo, soñador y muy creativo.' },
 ];
 
 function getZodiacSign(date) {
@@ -116,7 +116,9 @@ export default function App() {
                   <p className="result-title">
                     Hola, {name.trim() || 'amigo'} tu zodiaco es {horoscope.name}
                   </p>
-                  <div className="result-icon" dangerouslySetInnerHTML={{ __html: horoscope.icon }}></div>
+                  <div className="result-icon">
+                    <img src={horoscope.icon} alt={`Signo ${horoscope.name}`} width="100" height="100" />
+                  </div>
                   <h2 className="result-name">
                     {horoscope.name}
                   </h2>
